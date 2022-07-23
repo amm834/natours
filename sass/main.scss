@@ -1,3 +1,7 @@
+$color-primary: #7ed56f;
+$color-primary-light: #55c57a;
+$color-primary-dark: #28b485;
+
 *,
 *::before,
 *::after {
@@ -19,11 +23,13 @@ body {
 }
 
 .header {
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(85, 197, 122, 0.8)), url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-light, 0.8)),
+  url("../img/hero.jpg");
   height: 95vh;
   background-size: cover;
   background-position: center;
   position: relative;
+
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
@@ -59,9 +65,11 @@ body {
   font-size: 6rem;
   letter-spacing: 3.2rem;
   line-height: 1.6;
+
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
+
   /*animation-iteration-count: 3;*/
   /*animation-delay: 3s;*/
 }
@@ -72,6 +80,7 @@ body {
   letter-spacing: 1.5rem;
   font-weight: 700;
   margin-bottom: 4.8rem;
+
   animation-name: moveInRight;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -82,6 +91,7 @@ body {
     opacity: 0;
     transform: translateX(-10rem);
   }
+
   80% {
     transform: translateX(1rem);
   }
@@ -90,11 +100,13 @@ body {
     transform: translateX(0);
   }
 }
+
 @keyframes moveInRight {
   0% {
     opacity: 0;
     transform: translateX(10rem);
   }
+
   80% {
     transform: translateX(-1rem);
   }
@@ -103,16 +115,21 @@ body {
     transform: translateX(0);
   }
 }
+
 @keyframes moveInBottom {
   0% {
     opacity: 0;
     transform: translateY(3rem);
   }
+
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
+
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -121,18 +138,18 @@ body {
   color: #777;
   border-radius: 10rem;
   display: inline-block;
-  transition: all 0.3s;
+  transition: all .3s;
   position: relative;
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
 }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .25);
 }
 
 .btn--white {
@@ -148,9 +165,10 @@ body {
   left: 0;
   top: 0;
   border-radius: 10rem;
-  transition: all 0.4s;
+  transition: all .4s;
   z-index: -1;
 }
+
 
 .btn::after {
   background: #fff;
@@ -162,8 +180,6 @@ body {
 }
 
 .btn--animated {
-  animation: moveInBottom 0.3s ease-out 0.75s;
+  animation: moveInBottom .3s ease-out .75s;
   animation-fill-mode: backwards;
 }
-
-/*# sourceMappingURL=style.css.map */

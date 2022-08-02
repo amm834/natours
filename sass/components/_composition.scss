@@ -1,0 +1,40 @@
+.composition {
+  position: relative;
+
+  &__image {
+    width: 55%;
+    box-shadow: 0 1.5rem 3rem rgba($color-black, 0.4);
+    position: absolute;
+    border-radius: 1rem;
+    transition: all .2s;
+    z-index: 10;
+    outline-offset: 15px;
+
+    &:hover {
+      z-index: 20;
+      transform: scale(1.1);
+      outline: 15px solid $color-primary-light;
+    }
+
+
+    &--1 {
+      top: -2rem;
+    }
+
+    &--2 {
+      right: 0;
+      top: 2rem;
+    }
+
+    &--3 {
+      left: 20%;
+      top: 10rem;
+    }
+  }
+
+  // scale down the un-hovered images
+  &:hover &__image:not(:hover) {
+    transform: scale(.95);
+  }
+
+}

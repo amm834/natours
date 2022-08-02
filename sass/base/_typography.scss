@@ -1,0 +1,44 @@
+body {
+  font-family: Lato, sans-serif;
+  color: $color-gray-dark;
+  padding: 3rem;
+}
+
+
+.heading-primary {
+  color: $color-white;
+  font-weight: 400;
+  text-transform: uppercase;
+  /* to remove backward shades */
+  backface-visibility: hidden;
+  font-size: 1.6rem;
+
+
+  /* Setting the font size, letter spacing, line height, animation name, duration, timing function, iteration count, and
+  delay. */
+  &--main {
+    display: block;
+    font-size: 6rem;
+    letter-spacing: 3.2rem;
+    line-height: 1.6;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    /*animation-iteration-count: 3;*/
+    /*animation-delay: 3s;*/
+  }
+
+  &--sub {
+    display: block;
+    font-size: 1.8rem;
+    letter-spacing: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 4.8rem;
+
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+}

@@ -26,17 +26,14 @@ body {
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
-
 .header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
-
 .header__logo {
   height: 3.5rem;
 }
-
 .header__text-box {
   position: absolute;
   top: 40%;
@@ -52,8 +49,9 @@ body {
   /* to remove backward shades */
   backface-visibility: hidden;
   font-size: 1.6rem;
+  /* Setting the font size, letter spacing, line height, animation name, duration, timing function, iteration count, and
+  delay. */
 }
-
 .heading-primary--main {
   display: block;
   font-size: 6rem;
@@ -65,7 +63,6 @@ body {
   /*animation-iteration-count: 3;*/
   /*animation-delay: 3s;*/
 }
-
 .heading-primary--sub {
   display: block;
   font-size: 1.8rem;
@@ -113,8 +110,7 @@ body {
     transform: translateY(0);
   }
 }
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   padding: 1.5rem 4rem;
   text-decoration: none;
@@ -124,21 +120,21 @@ body {
   transition: all 0.3s;
   position: relative;
 }
-
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
-
+.btn:hover::after {
+  transform: scaleX(1.5) scaleY(1.6);
+  opacity: 0;
+}
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
 }
-
 .btn--white {
-  background: #ffffff;
+  background: #fff;
 }
-
 .btn::after {
   content: "";
   width: 100%;
@@ -150,17 +146,8 @@ body {
   border-radius: 10rem;
   transition: all 0.4s;
   z-index: -1;
-}
-
-.btn::after {
   background: #fff;
 }
-
-.btn:hover::after {
-  transform: scaleX(1.5) scaleY(1.6);
-  opacity: 0;
-}
-
 .btn--animated {
   animation: moveInBottom 0.3s ease-out 0.75s;
   animation-fill-mode: backwards;

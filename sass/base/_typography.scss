@@ -50,6 +50,7 @@ body {
   color: transparent;
   transition: all .3s;
   letter-spacing: 2px;
+  text-transform: uppercase;
 
   &:hover {
     transform: scale(1.1) skew(10deg, 3deg);

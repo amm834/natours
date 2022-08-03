@@ -60,6 +60,7 @@ body {
   color: transparent;
   transition: all 0.3s;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 .heading-secondary:hover {
   transform: scale(1.1) skew(10deg, 3deg);
@@ -196,6 +197,37 @@ body {
   box-shadow: 0 0.3rem 2rem rgba(0, 0, 0, 0.1);
 }
 
+.card {
+  perspective: 150rem;
+  height: 50rem;
+  position: relative;
+}
+.card__slide {
+  height: 50rem;
+  transition: transform 0.6s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.15);
+}
+.card__slide--front--1 {
+  background: #fff;
+}
+.card__slide--back {
+  transform: rotateY(180deg);
+}
+.card__slide--back--1 {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+.card:hover .card__slide--front {
+  transform: rotateY(180deg);
+}
+.card:hover .card__slide--back {
+  transform: rotateY(0deg);
+}
+
 .composition {
   position: relative;
 }
@@ -328,6 +360,12 @@ body {
 }
 .section-features > * {
   transform: skewY(7deg);
+}
+
+.section-tours {
+  padding: 25rem 0 50rem 0;
+  background: #f7f7f7;
+  margin-top: -10rem;
 }
 
 /*# sourceMappingURL=style.css.map */

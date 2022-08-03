@@ -1,8 +1,28 @@
+// text
+
+.text-lg {
+  font-size: 1.8rem;
+}
+
+.text-white {
+  color: $color-white !important;
+}
+
 .text-center {
   text-align: center;
 }
 
 // spacing
+
+
+.mt-md {
+  margin-top: 4rem;
+}
+
+.mt-lg {
+  margin-bottom: 8rem;
+}
+
 
 .mb-sm {
   margin-bottom: 2rem;
@@ -12,6 +32,7 @@
   margin-bottom: 4rem;
 }
 
-.mb-lg{
+.mb-lg {
   margin-bottom: 8rem;
 }
+

@@ -28,6 +28,18 @@
 
   &--white {
     background: $color-white;
+
+    &::after {
+      background: $color-white;
+    }
+  }
+
+  &--green {
+    background: $color-primary-light;
+
+    &::after {
+      background: $color-primary-light;
+    }
   }
 
   &::after {
@@ -41,7 +53,6 @@
     border-radius: 10rem;
     transition: all .4s;
     z-index: -1;
-    background: $color-white;
   }
 
 

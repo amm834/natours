@@ -1,18 +1,19 @@
 .card {
   perspective: 150rem;
-  height: 50rem;
+  height: 53rem;
   position: relative;
 
   &__slide {
-    height: 50rem;
-    transition: transform .6s;
+    height: 53rem;
+    transition: transform .8s ease;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     backface-visibility: hidden;
     box-shadow: 0 3rem 6rem rgba($color-black, 0.15);
-
+    border-radius: 4px;
+    overflow: hidden;
 
     &--front {
       &--1 {
@@ -30,10 +31,75 @@
   }
 
   &:hover &__slide--front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
 
   &:hover &__slide--back {
     transform: rotateY(0deg);
   }
+
+
+  &__picture {
+    background-blend-mode: screen;
+    height: 24rem;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url("../img/nat-5.jpg");
+    }
+
+    &--2 {
+    }
+
+    &--3 {
+    }
+
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-align: right;
+    position: absolute;
+    top: 14rem;
+    right: 2rem;
+    color: $color-white;
+    width: 75%;
+    text-transform: uppercase;
+    line-height: 1.6;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(to right bottom,
+              rgba($color-secondary-light, 0.85),
+              rgba($color-secondary-dark, 0.85));
+    }
+  }
+
+  &__details {
+    margin-top: 1.6rem;
+
+    ul {
+      list-style: none;
+      font-size: 1.5rem;
+      width: 75%;
+      margin: 0 auto;
+
+      li {
+        padding: 1.5rem 3rem;
+        text-align: center;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-gray-light-2;
+        }
+      }
+    }
+  }
+
 }

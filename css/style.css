@@ -199,18 +199,20 @@ body {
 
 .card {
   perspective: 150rem;
-  height: 50rem;
+  height: 53rem;
   position: relative;
 }
 .card__slide {
-  height: 50rem;
-  transition: transform 0.6s;
+  height: 53rem;
+  transition: transform 0.8s ease;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   backface-visibility: hidden;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
 }
 .card__slide--front--1 {
   background: #fff;
@@ -222,10 +224,55 @@ body {
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
 .card:hover .card__slide--front {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 .card:hover .card__slide--back {
   transform: rotateY(0deg);
+}
+.card__picture {
+  background-blend-mode: screen;
+  height: 24rem;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+.card__picture--1 {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/nat-5.jpg");
+}
+.card__heading {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-align: right;
+  position: absolute;
+  top: 14rem;
+  right: 2rem;
+  color: #fff;
+  width: 75%;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+.card__heading-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.card__heading-span--1 {
+  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+}
+.card__details {
+  margin-top: 1.6rem;
+}
+.card__details ul {
+  list-style: none;
+  font-size: 1.5rem;
+  width: 75%;
+  margin: 0 auto;
+}
+.card__details ul li {
+  padding: 1.5rem 3rem;
+  text-align: center;
+}
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
 }
 
 .composition {

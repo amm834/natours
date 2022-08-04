@@ -7,7 +7,7 @@
   &__input {
     display: block;
     padding: 1.6rem;
-    width: 100%;
+    width: 90%;
     border: 0;
     font-size: 1.6rem;
     font-family: inherit;
@@ -15,6 +15,7 @@
     border-bottom: 3px solid transparent;
     transition: all .4s ease;
     border-radius: 3px;
+    background: $color-white;
 
     &:focus {
       outline: none;
@@ -49,4 +50,51 @@
     opacity: 0;
     visibility: hidden;
   }
+
+  &__radio-group {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    font-size: $default-font-size;
+  }
+
+  &__radio-input {
+    display: none;
+  }
+
+
+  &__radio-btn {
+    width: 3rem;
+    height: 3rem;
+    border: 5px solid $color-primary-light;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    flex-direction: row;
+    transform: translateY(.7rem);
+    margin-right: .5rem;
+
+
+    &::after {
+      content: "";
+      background: $color-primary-light;
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .3s;
+    }
+  }
+
+  &__radio-input:checked + &__radio-label &__radio-btn::after {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
 }

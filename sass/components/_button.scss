@@ -1,15 +1,23 @@
 .btn {
-  text-transform: uppercase;
-  padding: 1.5rem 4rem;
-  text-decoration: none;
-  color: $color-gray-dark;
-  border-radius: 10rem;
-  display: inline-block;
-  transition: all .3s;
-  position: relative;
-  border: 0;
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    text-decoration: none;
+    color: $color-gray-dark;
+    border-radius: 10rem;
+    display: inline-block;
+    transition: all .3s;
+    position: relative;
 
-  &:hover {
+    // for button
+    border: 0;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba($color-black, .25);
 

@@ -1,0 +1,84 @@
+.navigation {
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__toggle-btn {
+    height: 7rem;
+    width: 7rem;
+    display: inline-block;
+    background: $color-white;
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px rgba($color-black, .15);
+    position: fixed;
+    right: 6.5rem;
+    top: 7rem;
+    z-index: 200;
+  }
+
+  &__background {
+    background-image: radial-gradient($color-primary, $color-primary-dark);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: fixed;
+    right: 7.5rem;
+    top: 8rem;
+    z-index: 100;
+
+    transform: scale(200);
+  }
+
+  &__box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 150;
+  }
+
+  &__list {
+    list-style: none;
+    text-align: center;
+  }
+
+  &__item {
+    margin-bottom: 2.5rem;
+    padding: 2rem 3rem;
+
+    // animation start here
+    background-image: linear-gradient(120deg, transparent 50%, $color-white 50%);
+    background-size: 220%;
+    transition: all .4s;
+    backface-visibility: hidden;
+  }
+
+  &__item:hover {
+    // take full width of element
+    background-position: 100%;
+  }
+
+
+  &__link {
+    font-size: 3.5rem;
+    text-decoration: none;
+    color: $color-white;
+    font-weight: 300;
+    transition: all .4s;
+    display: inline-block;
+
+    span {
+      margin-right: 2rem;
+    }
+
+
+  }
+
+  &__item:hover &__link {
+    color: $color-primary;
+    transform: translateX(1rem);
+  }
+
+
+}

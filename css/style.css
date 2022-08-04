@@ -543,6 +543,70 @@ body {
   visibility: visible;
 }
 
+.navigation__checkbox {
+  display: none;
+}
+.navigation__toggle-btn {
+  height: 7rem;
+  width: 7rem;
+  display: inline-block;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  right: 6.5rem;
+  top: 7rem;
+  z-index: 200;
+}
+.navigation__background {
+  background-image: radial-gradient(#7ed56f, #28b485);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: fixed;
+  right: 7.5rem;
+  top: 8rem;
+  z-index: 100;
+  transform: scale(200);
+}
+.navigation__box {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 150;
+}
+.navigation__list {
+  list-style: none;
+  text-align: center;
+}
+.navigation__item {
+  margin-bottom: 2.5rem;
+  padding: 2rem 3rem;
+  background-image: linear-gradient(120deg, transparent 50%, #fff 50%);
+  background-size: 220%;
+  transition: all 0.4s;
+  backface-visibility: hidden;
+}
+.navigation__item:hover {
+  background-position: 100%;
+}
+.navigation__link {
+  font-size: 3.5rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+  transition: all 0.4s;
+  display: inline-block;
+}
+.navigation__link span {
+  margin-right: 2rem;
+}
+.navigation__item:hover .navigation__link {
+  color: #7ed56f;
+  transform: translateX(1rem);
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;

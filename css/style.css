@@ -567,22 +567,26 @@ body {
   right: 7.5rem;
   top: 8rem;
   z-index: 100;
-  transform: scale(200);
+  transition: all 0.8s cubic-bezier(0.24, -0.14, 0.63, 1.22);
 }
 .navigation__box {
   position: fixed;
-  left: 50%;
+  opacity: 0;
+  left: 0%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 150;
+  transition: all 0.8s;
 }
 .navigation__list {
   list-style: none;
   text-align: center;
 }
 .navigation__item {
-  margin-bottom: 2.5rem;
-  padding: 2rem 3rem;
+  margin-bottom: 0.5rem;
+  padding: 1.5rem 1rem;
+  padding-right: 3rem;
+  display: block;
   background-image: linear-gradient(120deg, transparent 50%, #fff 50%);
   background-size: 220%;
   transition: all 0.4s;
@@ -605,6 +609,13 @@ body {
 .navigation__item:hover .navigation__link {
   color: #7ed56f;
   transform: translateX(1rem);
+}
+.navigation__checkbox:checked ~ .navigation__box {
+  opacity: 1;
+  left: 50%;
+}
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(100);
 }
 
 .row {

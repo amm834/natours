@@ -27,15 +27,19 @@
     top: 8rem;
     z-index: 100;
 
-    transform: scale(200);
+    //transform: scale(200);
+    transition: all 0.8s cubic-bezier(0.24,-0.14, 0.63, 1.22);
+
   }
 
   &__box {
     position: fixed;
-    left: 50%;
+    opacity: 0;
+    left: 0%;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 150;
+    transition: all .8s;
   }
 
   &__list {
@@ -44,8 +48,10 @@
   }
 
   &__item {
-    margin-bottom: 2.5rem;
-    padding: 2rem 3rem;
+    margin-bottom: .5rem;
+    padding: 1.5rem 1rem;
+    padding-right: 3rem;
+    display: block;
 
     // animation start here
     background-image: linear-gradient(120deg, transparent 50%, $color-white 50%);
@@ -80,5 +86,13 @@
     transform: translateX(1rem);
   }
 
+  &__checkbox:checked ~ &__box {
+    opacity: 1;
+    left: 50%;
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(100);
+  }
 
 }

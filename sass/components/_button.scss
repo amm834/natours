@@ -1,15 +1,13 @@
 .btn {
-  &:link,
-  &:visited {
-    text-transform: uppercase;
-    padding: 1.5rem 4rem;
-    text-decoration: none;
-    color: $color-gray-dark;
-    border-radius: 10rem;
-    display: inline-block;
-    transition: all .3s;
-    position: relative;
-  }
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  text-decoration: none;
+  color: $color-gray-dark;
+  border-radius: 10rem;
+  display: inline-block;
+  transition: all .3s;
+  position: relative;
+  border: 0;
 
   &:hover {
     transform: translateY(-3px);

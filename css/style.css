@@ -547,13 +547,14 @@ body {
   display: inline-block;
   position: relative;
   backface-visibility: hidden;
+  user-select: none;
 }
 .hamburger-menu .top,
 .hamburger-menu .middle,
 .hamburger-menu .bottom {
   display: block;
   width: 35px;
-  height: 1.8px;
+  height: 2px;
   background: #333;
   transition: all 0.2s;
 }
@@ -573,6 +574,9 @@ body {
 .hamburger-menu.open .middle {
   opacity: 0;
   background: #fff;
+}
+.hamburger-menu:hover span:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .navigation__checkbox {

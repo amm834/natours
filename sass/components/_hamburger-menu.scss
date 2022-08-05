@@ -2,13 +2,14 @@
   display: inline-block;
   position: relative;
   backface-visibility: hidden;
+  user-select: none;
 
   .top,
   .middle,
   .bottom {
     display: block;
     width: 35px;
-    height: 1.8px;
+    height: 2px;
     background: $color-gray-dark-3;
     transition: all .2s;
   }
@@ -34,6 +35,13 @@
       opacity: 0;
       background: $color-white;
     }
+  }
+
+  &:hover {
+    span:not(:last-child) {
+      margin-bottom: 9px;
+    }
+
   }
 
 }

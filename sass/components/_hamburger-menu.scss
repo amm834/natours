@@ -1,0 +1,39 @@
+.hamburger-menu {
+  display: inline-block;
+  position: relative;
+  backface-visibility: hidden;
+
+  .top,
+  .middle,
+  .bottom {
+    display: block;
+    width: 35px;
+    height: 1.8px;
+    background: $color-gray-dark-3;
+    transition: all .2s;
+  }
+
+  span:not(:last-child) {
+    margin-bottom: 7px;
+  }
+
+  &.open {
+    .top {
+      position: absolute;
+      top: 3px;
+      transform: rotate(-135deg);
+    }
+
+    .bottom {
+      position: absolute;
+      top: 3px;
+      transform: rotate(135deg);
+    }
+
+    .middle {
+      opacity: 0;
+      background: $color-white;
+    }
+  }
+
+}

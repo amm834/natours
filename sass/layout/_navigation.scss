@@ -5,16 +5,21 @@
   }
 
   &__toggle-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 7rem;
     width: 7rem;
-    display: inline-block;
     background: $color-white;
     border-radius: 50%;
     box-shadow: 1px 1px 3px rgba($color-black, .15);
+
     position: fixed;
     right: 6.5rem;
     top: 7rem;
     z-index: 200;
+
   }
 
   &__background {
@@ -28,7 +33,7 @@
     z-index: 100;
 
     //transform: scale(200);
-    transition: all 0.8s cubic-bezier(0.24,-0.14, 0.63, 1.22);
+    transition: all 0.8s cubic-bezier(0.24, -0.14, 0.63, 1.22);
 
   }
 
@@ -94,5 +99,6 @@
   &__checkbox:checked ~ &__background {
     transform: scale(100);
   }
+
 
 }

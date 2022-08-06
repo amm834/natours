@@ -9,8 +9,11 @@
 html {
   /* Default: 10px */
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   box-sizing: border-box;
+  line-height: 1.6;
 }
+

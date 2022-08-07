@@ -57,8 +57,18 @@
   width: 70%;
   margin: 0 auto;
 
+  @include responsive(tab-land) {
+    width: 80%;
+    background-image: linear-gradient(to right, rgba($color-white, 0.8) 100%, transparent 0%), url("../img/nat-10.jpg");
+  }
+
   &-form {
     width: 50%;
     padding: 4rem;
+
+    @include responsive(tab-land) {
+      width: 100%;
+      padding: 4rem 4rem 4rem 8rem;
+    }
   }
 }

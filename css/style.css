@@ -616,6 +616,13 @@ body {
   align-items: center;
   font-size: 1.6rem;
 }
+@media (max-width: 37rem) {
+  .form__radio-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
 .form__radio-input {
   display: none;
 }
@@ -1067,9 +1074,21 @@ body {
   width: 70%;
   margin: 0 auto;
 }
+@media (max-width: 75rem) {
+  .book {
+    width: 80%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 100%, transparent 0%), url("../img/nat-10.jpg");
+  }
+}
 .book-form {
   width: 50%;
   padding: 4rem;
+}
+@media (max-width: 75rem) {
+  .book-form {
+    width: 100%;
+    padding: 4rem 4rem 4rem 8rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

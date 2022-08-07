@@ -34,3 +34,9 @@ body {
   }
 }
 
+
+// custom selection
+::selection {
+  color: white;
+  background: $color-primary;
+}

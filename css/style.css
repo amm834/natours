@@ -38,6 +38,11 @@ body {
   }
 }
 
+::selection {
+  color: white;
+  background: #7ed56f;
+}
+
 body {
   font-family: Lato, sans-serif;
   color: #777;

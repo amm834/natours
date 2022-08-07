@@ -17,6 +17,10 @@
     border-top: 1px solid $color-gray-dark-2;
     padding-top: 2rem;
     display: inline-block;
+
+    @include responsive(tab-land) {
+      width: 100%;
+    }
   }
 
 
@@ -52,6 +56,10 @@
 
   &__item:hover &__link {
     color: $color-primary-light;
+  }
+
+  &__copyright {
+    width: 100%;
   }
 
 }

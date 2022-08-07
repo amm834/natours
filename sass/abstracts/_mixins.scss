@@ -5,3 +5,34 @@
     clear: both;
   }
 }
+
+
+// responsive media queries (Desktop first strategy)
+// Phone -           [300 - 600]px
+// Tablet Portrait   [600 - 900]px
+// Tablet Landscape  [900 - 1200]0px
+// [1200 - 1800]px is where current style will be applied
+// Big Desktop       1800px - ♾️
+
+@mixin responsive($screen) {
+  @if ($screen == phone) {
+    @media (max-width: 37rem) {
+      @content
+    }
+  }
+  @if ($screen == tab-port) {
+    @media (max-width: 56rem) {
+      @content
+    }
+  }
+  @if ($screen == tab-land) {
+    @media (max-width: 75rem) {
+      @content
+    }
+  }
+  @if ($screen == desk-big) {
+    @media (min-width: 112rem) {
+      @content
+    }
+  }
+}

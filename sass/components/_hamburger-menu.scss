@@ -12,10 +12,19 @@
     height: 2px;
     background: $color-gray-dark-3;
     transition: all .2s;
+
+    @include responsive(tab-land) {
+      width: 20px;
+    }
+
   }
 
   span:not(:last-child) {
     margin-bottom: 7px;
+
+    @include responsive(tab-land) {
+      margin-bottom: 5px;
+    }
   }
 
   &.open {
@@ -40,6 +49,10 @@
   &:hover {
     span:not(:last-child) {
       margin-bottom: 9px;
+
+      @include responsive(tab-port) {
+        margin-bottom: 6px;
+      }
     }
 
   }

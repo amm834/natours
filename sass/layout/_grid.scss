@@ -8,14 +8,31 @@
 
   &:not(:last-child) {
     margin-bottom: $grid-row-gap;
+
+  }
+
+  @include responsive(tab-land) {
+    width: 50rem;
   }
 
   [class^="col-"] {
     float: left;
 
+    @include responsive(tab-land) {
+      width: 100% !important;
+    }
+
     &:not(:last-child) {
       margin-right: $grid-col-gap;
+
+      @include responsive(tab-land) {
+        margin-bottom: $grid-row-gap-sm;
+        margin-right: 0 !important;
+      }
+
     }
+
+
   }
 
   .col-1-of-2 {

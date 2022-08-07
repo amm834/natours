@@ -10,10 +10,27 @@ html {
   /* Default: 10px */
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @include responsive(desk-big) {
+    font-size: 75%; // 12px
+  }
+
+  @include responsive(tab-land) {
+    font-size: 56%; // 9px
+  }
+
+  @include responsive(tab-port) {
+    font-size: 50%; // 8px
+  }
 }
 
 body {
   box-sizing: border-box;
   line-height: 1.6;
+  padding: 3rem;
+
+  @include responsive(tab-land) {
+    padding: 0;
+  }
 }
 

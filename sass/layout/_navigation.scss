@@ -20,6 +20,13 @@
     top: 7rem;
     z-index: 200;
 
+    @include responsive(tab-land) {
+      right: 3rem;
+      top: 3rem;
+      width: 5rem;
+      height: 5rem;
+    }
+
   }
 
   &__background {
@@ -34,6 +41,13 @@
 
     //transform: scale(200);
     transition: all 0.8s cubic-bezier(0.24, -0.14, 0.63, 1.22);
+
+    @include responsive(tab-land) {
+      width: 4rem;
+      height: 4rem;
+      right: 3rem;
+      top: 3rem;
+    }
 
   }
 

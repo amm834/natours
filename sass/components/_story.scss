@@ -6,6 +6,11 @@
   width: 75%;
   margin: 8rem auto;
 
+  @include responsive(tab-land) {
+    transform: translateX(0rem) translateY(0rem) skewX(0deg);
+    width: 100%;
+  }
+
   &__shape {
     height: 13rem;
     width: 13rem;
@@ -15,6 +20,12 @@
     float: left;
     overflow: hidden;
     transform: translateX(-3rem) translateY(-.5rem) skewX(12deg);
+
+    @include responsive(tab-land) {
+      transform: translateX(0rem) translateY(0rem) skewX(0deg);
+      margin-right: 2rem;
+    }
+
   }
 
   &__img {
@@ -43,6 +54,12 @@
     font-size: 1.6rem;
     transform: skewX(12deg);
     line-height: 1.5;
+
+    @include responsive(tab-land) {
+      transform: translateX(0rem) translateY(0rem) skewX(0deg);
+      line-height: 1.7;
+      margin-top: 2rem;
+    }
 
     .heading-tertiary {
       font-size: 2rem;
